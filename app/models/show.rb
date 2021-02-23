@@ -1,9 +1,11 @@
 class Show < ActiveRecord::Base
 
-  def initialize()
+  def initialize(options = {})
+    
   end
 
   def highest_rating
+    Show.maximum("rating")
   end
 
   def most_popular_show
